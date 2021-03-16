@@ -1,0 +1,27 @@
+{
+  "name": "sapp-js-sdk",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production --progress --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cww978/sapp-js-sdk.git"
+  },
+  "keywords": [
+    "sapp-js-sdk"
+  ],
+  "author": "cww",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cww978/sapp-js-sdk/issues"
+  },
+  "homepage": "https://github.com/cww978/sapp-js-sdk#readme",
+  "devDependencies": {
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  }
+}
