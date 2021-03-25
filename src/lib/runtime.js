@@ -9,7 +9,7 @@ function registerAll() {
 registerAll()
 console.info('sapp-js-runtime: ', config.version)
 export default {
-  config,
+  ...config,
   core,
   service
 }
