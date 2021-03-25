@@ -7,7 +7,7 @@
 浏览器直接引用
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/sapp-js-sdk@latest/src/dist/sapp-js-sdk-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sapp-js-sdk/src/dist/sapp-js-sdk-min.js"></script>
 ```
 
 npm 包管理工具引用
