@@ -64,6 +64,14 @@ sapp.util.logOut()
 sapp.util.checkVersion()
 ```
 
+### 刷新重新载入
+
+```javascript
+sapp.util.refresh()
+```
+
+
+
 ## 设备相关接口
 
 ### 获取设备信息
@@ -75,6 +83,54 @@ sapp.util.getSystemInfo({
   },
   fail: (error) => {
     // 获取失败
+  }
+})
+```
+
+## 存储相关接口
+
+### 保存数据
+
+```javascript
+sapp.util.cacheSetItem({
+	key: '', // 保存时的key
+	value: '', // 保存的值
+	option: {
+    time: 10, //存储的时间 当time等于0时表示永久
+    type: 'M' //存储时间类型可选 'M' 'S' 'ms'
+	},
+  success: () => {
+    // 保存成功
+  },
+  fail: (error) => {
+    // 保存失败
+  }
+})
+```
+
+### 取出数据
+
+```javascript
+sapp.util.cacheGetItem({
+	key: '', // key
+  success: (res) => {
+    const data = res.data // 获取成功
+  },
+  fail: (error) => {
+    // 获取失败
+  }
+})
+```
+
+### 清空数据
+
+```javascript
+sapp.util.cacheClear({
+  success: () => {
+    // 清空完成
+  },
+  fail: (error) => {
+    // 清空失败
   }
 })
 ```
