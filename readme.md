@@ -93,12 +93,12 @@ sapp.util.getSystemInfo({
 
 ```javascript
 sapp.util.cacheSetItem({
-	key: '', // 保存时的key
-	value: '', // 保存的值
-	option: {
+  key: '', // 保存时的key
+  value: '', // 保存的值
+  option: {
     time: 10, //存储的时间 当time等于0时表示永久
     type: 'M' //存储时间类型可选 'M' 'S' 'ms'
-	},
+  },
   success: () => {
     // 保存成功
   },
@@ -112,7 +112,7 @@ sapp.util.cacheSetItem({
 
 ```javascript
 sapp.util.cacheGetItem({
-	key: '', // key
+  key: '', // key
   success: (res) => {
     const data = res.data // 获取成功
   },
