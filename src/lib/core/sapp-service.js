@@ -49,6 +49,17 @@ function logOut() {
 	})
 }
 
+function refresh() {
+	return new Promise(async (resolve, reject) => {
+		try {
+			ViewService.refresh()
+			resolve(R.ok())
+		} catch (e) {
+			reject(R.fail())
+		}
+	})
+}
+
 function checkVersion() {
 	return new Promise(async (resolve, reject) => {
 		try {
@@ -137,9 +148,43 @@ function getSystemInfo() {
 	})
 }
 
+function cacheSetItem({ params }) {
+	return new Promise(async (resolve, reject) => {
+		try {
+			await CacheService.setItem(params)
+			resolve(R.ok())
+		} catch (e) {
+			reject(R.fail())
+		}
+	})
+}
+
+function cacheGetItem({ params }) {
+	return new Promise(async (resolve, reject) => {
+		try {
+			const data = await CacheService.getItem(params)
+			resolve(R.ok(data))
+		} catch (e) {
+			reject(R.fail())
+		}
+	})
+}
+
+function cacheClear() {
+	return new Promise(async (resolve, reject) => {
+		try {
+			await CacheService.clear()
+			resolve(R.ok())
+		} catch (e) {
+			reject(R.fail())
+		}
+	})
+}
+
 export default {
 	logOut,
 	reload: logOut,
+	refresh,
 	getAuthorization,
 	getLocation,
 	chooseImage,
@@ -150,5 +195,8 @@ export default {
 	hideSafearea,
 	getStatusbarHeight,
 	getSafeAreaHeight,
-	getSystemInfo
+	getSystemInfo,
+	cacheSetItem,
+	cacheGetItem,
+	cacheClear
 }
