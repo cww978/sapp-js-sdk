@@ -11,6 +11,9 @@ export default {
 	reload: (params) => {
 		core.dispatch('reload', params)
 	},
+	refresh: (params) => {
+		core.dispatch('refresh', params)
+	},
 	getAuthorization: (params) => {
 		core.dispatch('getAuthorization', params)
 	},
@@ -40,5 +43,14 @@ export default {
 	},
 	getSystemInfo: (params) => {
 		core.dispatch('getSystemInfo', params)
+	},
+	cacheSetItem: (params) => {
+		core.dispatch('cacheSetItem', params)
+	},
+	cacheGetItem: (params) => {
+		core.dispatch('cacheGetItem', params)
+	},
+	cacheClear: (params) => {
+		core.dispatch('cacheClear', params)
 	}
 }

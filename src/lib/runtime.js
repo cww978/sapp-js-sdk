@@ -7,7 +7,17 @@ function registerAll() {
   }
 }
 registerAll()
+
+if (typeof window.sapp == 'undefined') {
+  window.sapp = {
+    ...config,
+    core,
+    service
+  }
+}
+
 console.info('sapp-js-runtime: ', config.version)
+
 export default {
   ...config,
   core,
